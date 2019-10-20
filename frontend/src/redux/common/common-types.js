@@ -1,0 +1,2 @@
+export const SHOW_MODAL = 'COMMON/SHOW_MODAL';
+export const HIDE_MODAL = 'COMMON/HIDE_MODAL';
