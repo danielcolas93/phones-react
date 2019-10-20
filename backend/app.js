@@ -1,9 +1,15 @@
 var express = require('express');
-var app = express();
+var cors = require('cors');
 var phones = require('./data/phones.json');
 
+var app = express();
+
+app.use(cors());
+
 app.get('/phones', function (req, res) {
-  res.send(phones);
+  setTimeout(() => {
+    res.send(phones);
+  }, 2000)
 });
 
 app.listen(9000, function() {
