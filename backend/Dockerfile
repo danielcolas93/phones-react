@@ -1,7 +1,7 @@
 FROM node:10.16.0
 WORKDIR /api
-COPY package*json /api/
-RUN npm i --quiet
+COPY package.json yarn.lock /api/
+RUN yarn --pure-lockfile
 COPY . /api/
 EXPOSE 80
-CMD ["npm", "start"]
+CMD ["yarn", "start"]
