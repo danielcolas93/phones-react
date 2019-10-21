@@ -1,24 +1,12 @@
 import styled from 'styled-components';
+import { device } from '../../utils/breakpoints';
 
 export const modalStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    display: "grid",
-    width: "90%",
-    minHeight: "75%",
-    borderWidth: 0,
-    padding: 50,
-    transform: "translate(-50%, -50%)"
-  },
   overlay: {
-    backgroundColor: "rgba(0,0,0,0.6)",
-    zIndex: 100
-  }
-}
+    backgroundColor: 'rgba(0,0,0,0.6)',
+    zIndex: 100,
+  },
+};
 
 export const PhoneModalContainer = styled.div`
   border-width: 1px;
@@ -30,6 +18,10 @@ export const PhoneModalContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media ${device.mobileL} {
+    height: 80vh;
+  }
 `;
 
 export const CloseIcon = styled.img`
@@ -38,4 +30,39 @@ export const CloseIcon = styled.img`
   right: 60px;
   height: 40px;
   width: 40px;
+`;
+
+export const ModalTitle = styled.h1`
+  font-family: Fjalla One;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0.1em;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const ModalDescription = styled.p`
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: justify;
+  letter-spacing: 0.14em;
+`;
+
+export const ModalDetailsList = styled.ul`
+  width: 50%;
+  border: 2px solid black;
+`;
+
+export const ModalItemList = styled.li`
+  font-family: Fjalla One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
 `;

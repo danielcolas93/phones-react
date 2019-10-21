@@ -15,15 +15,15 @@ export const CardContainer = styled.div`
 
   @media ${device.mobileL} {
     width: 60%;
-  }
+  };
 
   @media ${device.laptop} {
     width: 30%;
-  }
+  };
 
   @media ${device.laptopL} {
     width: 20%;
-  }
+  };
 `;
 
 export const CardImage = styled.div`
@@ -54,7 +54,6 @@ export const CardTitle = styled.h1`
   font-size: 15px;
   line-height: 25px;
   letter-spacing: 0.1em;
-
   display: flex;
   justify-content: space-between;
 `;
@@ -66,5 +65,7 @@ export const CardSubtitle = styled.h2`
   font-size: 15px;
   line-height: 17px;
   letter-spacing: 0.2em;
+  display: flex;
+  justify-content: space-between;
 `;
 

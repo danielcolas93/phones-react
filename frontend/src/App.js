@@ -1,14 +1,14 @@
 import React from 'react';
-import HomeScreen from './pages/Home';
+import PhoneListSection from './pages/PhoneListSection';
 import PhoneModal from './components/PhoneModal';
 
 function App() {
   return (
     <div className="App">
-      <HomeScreen />
+      <PhoneListSection />
       <PhoneModal />
     </div>
   );
-}
+};
 
 export default App;

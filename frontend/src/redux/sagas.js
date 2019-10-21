@@ -8,4 +8,4 @@ export default function* rootSaga() {
   yield all([
     takeLatest(phoneTypes.GET_PHONES_START, getPhones),
   ]);
-}
+};

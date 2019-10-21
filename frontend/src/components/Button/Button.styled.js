@@ -12,6 +12,7 @@ export const StyledButton = styled.button`
 
   &:focus,
   &:active {
+    outline: none;
     background: transparent;
-  }
+  };
 `;

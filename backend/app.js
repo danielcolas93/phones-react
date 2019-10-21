@@ -9,7 +9,7 @@ app.use(cors());
 app.get('/phones', function (req, res) {
   setTimeout(() => {
     res.send(phones);
-  }, 2000)
+  }, 2000);
 });
 
 app.listen(9000, function() {

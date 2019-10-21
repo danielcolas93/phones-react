@@ -1,11 +1,9 @@
 import { SHOW_MODAL, HIDE_MODAL } from './common-types';
 
-export const showModal = payload => ({
+export const showModal = () => ({
   type: SHOW_MODAL,
-  payload
 });
 
-export const hideModal = payload => ({
+export const hideModal = () => ({
   type: HIDE_MODAL,
-  payload
 });

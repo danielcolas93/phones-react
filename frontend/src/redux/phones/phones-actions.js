@@ -2,13 +2,12 @@ import {
   GET_PHONES_FAIL,
   GET_PHONES_START,
   GET_PHONES_SUCCESS,
-  GET_PHONE_DETAILS,
-  REMOVE_PHONE_DETAILS,
+  SET_SELECTED_PHONE,
+  REMOVE_SELECTED_PHONE,
 } from './phones-types';
 
-export const getPhonesStart = payload => ({
+export const getPhonesStart = () => ({
   type: GET_PHONES_START,
-  payload,
 });
 
 export const getPhonesSuccess = payload => ({
@@ -21,12 +20,11 @@ export const getPhonesFail = payload => ({
   payload,
 });
 
-export const getPhoneDetails = payload => ({
-  type: GET_PHONE_DETAILS,
+export const setSelectedPhone = payload => ({
+  type: SET_SELECTED_PHONE,
   payload,
 });
 
-export const removePhoneDetails = payload => ({
-  type: REMOVE_PHONE_DETAILS,
-  payload,
+export const removeSelectedPhone = () => ({
+  type: REMOVE_SELECTED_PHONE,
 });

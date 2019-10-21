@@ -2,15 +2,15 @@ import {
   GET_PHONES_FAIL,
   GET_PHONES_START,
   GET_PHONES_SUCCESS,
-  GET_PHONE_DETAILS,
-  REMOVE_PHONE_DETAILS,
+  SET_SELECTED_PHONE,
+  REMOVE_SELECTED_PHONE,
 } from './phones-types';
 
 const initialState = {
   phones: [],
   selectedPhone: {},
   error: null,
-  loading: false
+  isLoading: false,
 };
 
 export default (state = initialState, action) => {
@@ -18,33 +18,33 @@ export default (state = initialState, action) => {
     case GET_PHONES_START:
       return {
         ...state,
-        loading: true,
+        isLoading: true,
         error: null
       };
     case GET_PHONES_SUCCESS:
       return {
         ...state,
         phones: action.payload,
-        loading: false,
+        isLoading: false,
         error: null
       };
     case GET_PHONES_FAIL:
       return {
         ...state,
-        loading: true,
+        isLoading: true,
         error: action.payload
       };
-    case GET_PHONE_DETAILS:
+    case SET_SELECTED_PHONE:
       return {
         ...state,
-        phone: action.payload,
+        selectedPhone: action.payload,
       };
-    case REMOVE_PHONE_DETAILS:
+    case REMOVE_SELECTED_PHONE:
     return {
       ...state,
-      phone: {},
+      selectedPhone: {},
     };
     default:
       return state;
-  }
+  };
 };

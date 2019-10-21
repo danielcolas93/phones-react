@@ -10,19 +10,16 @@ import {
 import Button from '../Button';
 import PhoneImage from '../PhoneImage';
 import { showModal as showModalAction } from '../../redux/common/common-actions';
-import { getPhoneDetails as getPhoneDetailsAction } from '../../redux/phones/phones-actions';
+import { setSelectedPhone as setSelectedPhoneAction } from '../../redux/phones/phones-actions';
 
-const Card = ({
-  phoneDetails,
-  showModal,
-  getPhoneDetails,
-}) => {
+const Card = ({ phoneDetails, showModal, setSelectedPhone }) => {
   const { imageFileName, name, price } = phoneDetails;
 
   const handleClick = () => {
-    getPhoneDetails(phoneDetails);
+    setSelectedPhone(phoneDetails);
     showModal();
-  }
+  };
+
   return (
     <CardContainer className='card--container'>
       <CardImage>
@@ -41,10 +38,7 @@ const Card = ({
 
 const mapDispatchToProps = dispatch => ({
   showModal: () => dispatch(showModalAction()),
-  getPhoneDetails: props => dispatch(getPhoneDetailsAction(props)),
+  setSelectedPhone: props => dispatch(setSelectedPhoneAction(props)),
 });
 
-export default connect(
-  null,
-  mapDispatchToProps,
-)(Card);
+export default connect(null, mapDispatchToProps)(Card);

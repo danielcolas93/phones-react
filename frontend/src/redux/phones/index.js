@@ -1,1 +1,1 @@
-export {default as reducer} from './phones-reducer';
+export { default as reducer } from './phones-reducer';

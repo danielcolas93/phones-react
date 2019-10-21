@@ -7,8 +7,8 @@ const api = create({
   headers: {
     'Content-Type': 'application/x-www-form-urlencoded',
     'Accept': 'application/json',
-    'Access-Control-Allow-Origin': '*'
-  }
+    'Access-Control-Allow-Origin': '*',
+  },
 });
 
 export const getPhones = () => api.get('/phones');
