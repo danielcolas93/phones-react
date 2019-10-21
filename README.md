@@ -4,7 +4,7 @@ App to show list of phones
 ## Installation Steps
 
 - Run `yarn install` inside both `frontend` and `backend` folders.
-- Run `docker-compose up -d --build`.
+- Run `docker-compose up -d --build` on the main folder.
 - That's it :).
 
 ## How to use
