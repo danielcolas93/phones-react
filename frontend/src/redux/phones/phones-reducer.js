@@ -31,7 +31,7 @@ export default (state = initialState, action) => {
     case GET_PHONES_FAIL:
       return {
         ...state,
-        isLoading: true,
+        isLoading: false,
         error: action.payload
       };
     case SET_SELECTED_PHONE:
