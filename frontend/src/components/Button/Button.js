@@ -7,4 +7,6 @@ const Button = ({ children, onClick}) => (
   </StyledButton>
 );
 
+Button.displayName = 'Button';
+
 export default Button;

@@ -16,3 +16,5 @@ export const StyledButton = styled.button`
     background: transparent;
   };
 `;
+
+StyledButton.displayName = 'button';

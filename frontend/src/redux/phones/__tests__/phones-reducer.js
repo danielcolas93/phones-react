@@ -20,7 +20,7 @@ describe('phones-reducers', () => {
   });
 
   it('should set phones, isLoading=false, error=null', () => {
-    const phones = [{ id: 1, name: 'iPhone 7' }];
+    const phones = [{ id: 1, name: 'iPhone 7' }, { id: 2, name: 'iPhone 8' }];
 
     expect(reducer(initialState, {
       type: types.GET_PHONES_SUCCESS,
